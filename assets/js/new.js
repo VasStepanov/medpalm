@@ -71,4 +71,48 @@ $(document).ready(function () {
             }
         ]
     });
+
+    // Якорные ссылки
+
+    // 1. Проверяем, есть ли вообще такие ссылки на странице
+    var $navLinks = $('.directions-nav-link');
+    
+    if ($navLinks.length > 0) {
+        
+        $navLinks.on('click', function(event) {
+            var targetHash = this.hash;
+            
+            if (targetHash) {
+                var $targetSection = $(targetHash);
+                
+                if ($targetSection.length > 0) {
+                    event.preventDefault(); // Отменяем стандартный резкий скачок
+                    
+                    // Переменная для динамического отступа
+                    var headerHeight = 0; 
+                    
+                    // Проверяем ширину экрана в момент клика
+                    if ($(window).width() < 768) {
+                        headerHeight = 60;  // Отступ для мобильной версии (поменьше)
+                    } else {
+                        headerHeight = 120;  // Отступ для ПК версии (побольше)
+                    }
+                    
+                    // Вычисляем точную позицию секции с учетом адаптивного отступа
+                    var targetOffset = $targetSection.offset().top - headerHeight;
+                    
+                    // Запускаем плавную анимацию скролла
+                    $('html, body').animate({
+                        scrollTop: targetOffset
+                    }, 800);
+                }
+            }
+        });
+        
+    }
+
+    // ==========================================================================
+    // ТВОЙ СЛЕДУЮЩИЙ КОД (Продолжит работу в любом случае, даже если ссылок нет)
+    // ==========================================================================
+    console.log("Скрипт скролла проверен. JS продолжает выполнение...");
 });
