@@ -105,6 +105,13 @@
     /* letter-spacing: -1px; */
     line-height: 1;
 
+    br {
+        display: none;
+        @media(max-width:767.98px) {
+            display: block;
+        }
+    }
+
     .tbr {
         display: none;
         @media(max-width:767.98px) {
