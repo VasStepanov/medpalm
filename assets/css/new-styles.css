@@ -19,11 +19,11 @@
 .directions-banner {
     position: relative;
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: 30px;
     min-height: 440px;
     display: flex;
     align-items: center;
-    padding: 60px;
+    padding: 50px 60px 120px 100px;
     box-sizing: border-box;
 }
 
@@ -45,7 +45,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
@@ -62,22 +62,51 @@
 .directions-breadcrumbs {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    margin-bottom: 24px;
+    margin-bottom: 44px;
     color: rgba(255, 255, 255, 0.7);
+
+    @media (max-width: 768px) {
+        margin-bottom: 27px;
+    }
 }
 
 .directions-breadcrumbs__separator {
     margin: 0 6px;
+    color: #E8C9A0;
+    @media (max-width: 768px) {
+        font-size: 9px;
+    }
+}
+
+.directions-breadcrumbs__item {
+    font-size: 12px;
+    @media (max-width: 768px) {
+        font-size: 9px;
+    }
+    a {
+        font-size: 12px;
+        color: #E8C9A0;
+        @media (max-width: 768px) {
+        font-size: 9px;
+    }
+    }
 }
 
 /* Заголовок */
 .directions-banner__title {
     font-family: 'Montserrat', sans-serif;
     font-size: 54px;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0 8px 0;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     line-height: 1;
+
+    .tbr {
+        display: none;
+        @media(max-width:767.98px) {
+            display: block;
+        }
+    }
 }
 
 /* Цена */
@@ -87,11 +116,11 @@
     font-weight: 400;
     color: #E8C9A0;
     /* Золотисто-желтый оттенок из макета */
-    margin: 0 0 32px 0;
+    margin: 0 0 42px 0;
 }
 
 .directions-banner__price span {
-    font-weight: 500;
+    font-weight: 400;
 }
 
 /* Список преимуществ */
@@ -167,16 +196,18 @@
 /* Адаптивность для мобильной версии */
 @media (max-width: 768px) {
     .directions-banner {
-        padding: 40px 20px;
+        padding: 20px 30px;
         min-height: auto;
+        border-radius: 20px;
     }
 
     .directions-banner__title {
-        font-size: 32px;
+        font-size: 30px;
+        line-height: 1.3;
     }
 
     .directions-banner__price {
-        font-size: 20px;
+        font-size: 30px;
         margin-bottom: 24px;
     }
 
@@ -192,10 +223,16 @@
     .directions-actions {
         flex-direction: column;
         width: 100%;
+        gap: 12px;
     }
 
     .directions-btn {
         width: 100%;
+        font-size: 14px;
+    }
+
+    .directions-btn--primary {
+        color: #3B3B3A;
     }
 }
 
@@ -364,6 +401,9 @@
     .services-card {
         border-radius: 14px;
         /* Чуть уменьшаем скругление под маленькие экраны */
+        aspect-ratio: auto; /* Отключаем пропорцию, которая была на ПК */
+        height: 179px;       /* Жестко задаем высоту 179px согласно ТЗ */
+        width: 100%;        /* Ширина послушно займет половину грид-сетки */
     }
 
     /* Адаптируем плашку с блюром под узкие карточки */
@@ -373,13 +413,13 @@
         right: 8px;
         padding: 4px 6px;
         min-height: 62px;
-        height: 62px;
+        height: 71px;
         border-radius: 10px;
     }
 
     /* Уменьшаем шрифт, чтобы длинные названия не вылезали за края */
     .services-card__text {
-        font-size: 11px;
+        font-size: 12px;
         line-height: 1.2;
     }
 
@@ -855,19 +895,23 @@
     }
 
     .advantage-card__title {
-        font-size: 15px;
+        font-size: 16px;
         margin-bottom: 8px;
         padding-right: 45px;
     }
 
     .advantage-card__desc {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
 /* ПЛАШКИ НАВИГАЦИИ */
 .tabs-sec {
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        margin-top: 40px;
+    }
 }
 
 /* Контейнер секции навигации */
@@ -907,13 +951,13 @@
 
 /* Эффект при наведении на десктопе */
 .directions-nav-link:hover:not(.is-active) {
-    background-color: #f5f0e9;
+    background-color: #E9E5DD;
     color: #1a1816;
 }
 
 /* Активное состояние (первая плашка) */
 .directions-nav-link.is-active {
-    background-color: #e5ded4;
+    background-color: #E9E5DD;
     /* Бежево-серая плашка из макета */
     color: #2e2a25;
     cursor: default;
@@ -989,7 +1033,7 @@
 /* Картинка */
 .consultation-image-wrapper {
     flex: 0 0 40%;
-    max-width: 450px;
+    max-width: 554px;
     border-radius: 16px;
     overflow: hidden;
     position: relative;
@@ -1013,16 +1057,16 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #2e2a25;
+    color: #3B3B3B;
     margin: 0 0 16px 0;
     line-height: 1.3;
 }
 
 .consultation-subtitle {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    color: #615a51;
+    color: #3B3B3B;
     margin: 0 0 24px 0;
 }
 
@@ -1034,6 +1078,7 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+    max-width: 922px;
 }
 
 /* Элемент списка теперь является позицией для маркера */
@@ -1065,9 +1110,9 @@
 
 .consultation-list__text {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: #4a453f;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #3B3B3B;
     margin: 0;
 }
 
@@ -1109,12 +1154,14 @@
     }
 
     .consultation-title {
-        font-size: 20px;
-        margin-bottom: 12px;
+        font-size: 18px;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+        font-weight: 600;
     }
 
     .consultation-subtitle {
-        font-size: 13px;
+        font-size: 14px;
         margin-bottom: 16px;
     }
 
@@ -1135,7 +1182,8 @@
     }
 
     .consultation-list__text {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.2;
     }
 }
 
@@ -1161,18 +1209,18 @@
 
 .process-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #2e2a25;
+    font-size: 28px;
+    font-weight: 600;
+    color: #3B3B3B;
     margin: 0 0 16px 0;
     line-height: 1.3;
 }
 
 .process-subtitle {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
-    color: #615a51;
+    color: #3B3B3B;
     margin: 0 0 32px 0;
 }
 
@@ -1195,9 +1243,9 @@
 /* Номер этапа (маленький и розово-бежевый) */
 .process-step__number {
     font-family: 'Inter', sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 500;
-    color: #cca885;
+    color: #8A8A8A;
     /* Приглушенный оттенок из макета */
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -1207,19 +1255,20 @@
 /* Заголовок этапа */
 .process-step__title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-    color: #2e2a25;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
     margin: 0 0 6px 0;
     line-height: 1.4;
+    letter-spacing: -1px;
 }
 
 /* Описание этапа */
 .process-step__desc {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    line-height: 1.5;
-    color: #615a51;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #3B3B3B;
     margin: 0;
 }
 
@@ -1288,6 +1337,7 @@
         gap: 24px;
         padding: 20px;
         border-radius: 20px;
+        margin-bottom: 34px;
     }
 
     /* Картинка падает вниз под контент */
@@ -1306,13 +1356,16 @@
     }
 
     .process-title {
-        font-size: 20px;
+        font-size: 18px;
+        letter-spacing: -1px;
+        color: #3B3B3B;
         margin-bottom: 12px;
     }
 
     .process-subtitle {
-        font-size: 13px;
+        font-size: 14px;
         margin-bottom: 24px;
+        line-height: 1.2;
     }
 
     .process-steps {
@@ -1320,8 +1373,14 @@
     }
 
     .process-step__title {
-        font-size: 15px;
+        font-size: 16px;
     }
+
+    .process-step__desc {
+    
+    font-size: 14px;
+    line-height: 1.2;
+}
 
     /* Кнопка во всю ширину экрана на мобилках */
     .process-footer {
@@ -1332,6 +1391,10 @@
     .process-btn-more {
         width: 100%;
     }
+
+    .process-image {
+    height: 280px;
+}
 }
 
 /* МАСОНРИ ГАЛЛЕРЕЯ */
@@ -1442,7 +1505,8 @@
 
     /* 1 экран = 1 слайд во всю ширину */
     .gallery-grid .gallery-item {
-        height: auto;
+        /* height: auto; */
+        height: 202px;
         aspect-ratio: 4 / 3;
         /* Красивая фото-пропорция на мобильном */
         border-radius: 16px;
@@ -1507,9 +1571,9 @@
 /* Заголовок секции */
 .prices-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #2e2a25;
+    font-size: 28px;
+    font-weight: 600;
+    color: #3B3B3B;
     margin: 0 0 32px 0;
     line-height: 1.3;
 }
@@ -1525,10 +1589,11 @@
 }
 
 .prices-header__col {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 500;
-    color: #8c857b;
+   font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #7A7875;
+    letter-spacing: -1px;
     /* Блеклый серый цвет подписи */
 }
 
@@ -1559,8 +1624,8 @@
 
 /* Блок названия услуги */
 .prices-row__name {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
     font-weight: 500;
     color: #4a453f;
     line-height: 1.5;
@@ -1571,7 +1636,7 @@
 /* Блок стоимости */
 .prices-row__value {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 700;
     /* Жирное начертание цены из макета */
     color: #2e2a25;
@@ -1592,7 +1657,7 @@
     }
 
     .prices-title {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 24px;
     }
 
@@ -1603,10 +1668,11 @@
 
     /* Перестраиваем строку во флекс-столбец */
     .prices-row {
-        flex-direction: column;
+        /* flex-direction: column; */
+        flex-direction: row;
         align-items: flex-start;
         /* Выравнивание колонок по левой верхней границе */
-        gap: 8px;
+        gap: 18px;
         /* Небольшой зазор между названием и ценой */
         padding: 16px 0;
     }
@@ -1622,7 +1688,19 @@
     /* Сбрасываем правое выравнивание цены для мобилки */
     .prices-row__value {
         font-size: 14px;
-        text-align: left;
+        text-align: right;
+
+        /* 1. Разрешаем тексту переноситься на новую строку */
+        white-space: normal; 
+        
+        /* 2. Заставляем слова переноситься только по пробелам, а не резать цифры */
+        word-break: keep-all; 
+        overflow-wrap: break-word;
+        
+        /* 3. Ограничиваем максимальную ширину блока цены (примерно под длину "800 AED / сеанс"),
+           чтобы название услуги слева не вытесняло цену в узкую вертикальную полоску */
+        max-width: 90px; 
+        flex-shrink: 0; /* Не даем флексу сжимать блок цены меньше этой ширины */
     }
 }
 
@@ -1630,10 +1708,10 @@
 
 /* Главный блок-обертка */
 .contacts-block {
-    background-color: #fcf9f5;
+    background-color: #f4f1ea;
     /* Легкий теплый фон подложки из макета */
-    border-radius: 24px;
-    padding: 32px;
+    /* border-radius: 24px; */
+    /* padding: 32px; */
     display: flex;
     gap: 32px;
     /* Расстояние между формой и картой на ПК */
@@ -1655,11 +1733,12 @@
 
 .contacts-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #2e2a25;
+    font-size: 36px;
+    font-weight: 600;
+    color: #3D3D3C;
     margin: 0 0 28px 0;
     line-height: 1.3;
+    letter-spacing: -1px;
 }
 
 /* Поля формы */
@@ -1790,6 +1869,7 @@
     .contacts-block {
         gap: 20px;
         padding: 20px;
+        margin-top: 0;
     }
 
     .contacts-form-wrapper {
@@ -1803,7 +1883,7 @@
     .contacts-block {
         flex-direction: column-reverse;
         gap: 16px;
-        padding: 12px;
+        padding: 12px 0 12px 0;
         border-radius: 20px;
     }
 
@@ -1826,7 +1906,7 @@
 
     .contacts-title {
         font-size: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
 }
 
@@ -1844,9 +1924,9 @@
 /* Заголовок секции */
 .faq-title {
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #2e2a25;
+    font-size: 36px;
+    font-weight: 600;
+    color: #3D3D3C;
     margin: 0 0 32px 0;
     line-height: 1.3;
 }
@@ -1944,6 +2024,7 @@ summary::-webkit-details-marker {
 .faq-content {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    font-weight: 500;
     letter-spacing: -1px;
     padding: 0 24px 24px 24px;
     line-height: 150%;
@@ -1960,6 +2041,7 @@ summary::-webkit-details-marker {
     /* Заголовок секции */
     .faq-title {
         margin: 0 0 12px 0;
+        font-size: 22px;
     }
 
     .faq-block summary {
