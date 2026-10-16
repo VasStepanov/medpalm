@@ -1,0 +1,2061 @@
+.new-section-directions {
+    margin-bottom: 60px;
+
+    @media(max-width:767.98px) {
+        margin-bottom: 30px;
+    }
+}
+
+/* первая секция */
+/* Элементы секции */
+.first-section {
+    margin-top: 80px;
+
+    @media(max-width:767.98px) {
+        margin-top: 30px;
+    }
+}
+
+.directions-banner {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    padding: 50px 60px 120px 100px;
+    box-sizing: border-box;
+}
+
+/* Картинка из бэкенда растягивается на весь блок */
+.directions-banner__bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Оверлей поверх картинки */
+.directions-banner__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Контент поверх оверлея */
+.directions-banner__content {
+    position: relative;
+    z-index: 3;
+    max-width: 640px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Хлебные крошки */
+.directions-breadcrumbs {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    margin-bottom: 44px;
+    color: rgba(255, 255, 255, 0.7);
+
+    @media (max-width: 768px) {
+        margin-bottom: 27px;
+    }
+}
+
+.directions-breadcrumbs__separator {
+    margin: 0 6px;
+    color: #E8C9A0;
+    @media (max-width: 768px) {
+        font-size: 9px;
+    }
+}
+
+.directions-breadcrumbs__item {
+    font-size: 12px;
+    @media (max-width: 768px) {
+        font-size: 9px;
+    }
+    a {
+        font-size: 12px;
+        color: #E8C9A0;
+        @media (max-width: 768px) {
+        font-size: 9px;
+    }
+    }
+}
+
+/* Заголовок */
+.directions-banner__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 54px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    .tbr {
+        display: none;
+        @media(max-width:767.98px) {
+            display: block;
+        }
+    }
+}
+
+/* Цена */
+.directions-banner__price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: #E8C9A0;
+    /* Золотисто-желтый оттенок из макета */
+    margin: 0 0 42px 0;
+}
+
+.directions-banner__price span {
+    font-weight: 400;
+}
+
+/* Список преимуществ */
+.directions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.directions-list__item {
+    font-family: Inter, sans-serif;
+    display: flex;
+    /* align-items: flex-start; */
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+    /* line-height: 1.5; */
+    color: rgba(255, 255, 255, 1);
+}
+
+.directions-list__icon {
+    color: #fde047;
+    margin-right: 10px;
+    user-select: none;
+}
+
+/* Блок кнопок */
+.directions-actions {
+    display: flex;
+    gap: 16px;
+}
+
+/* Базовый класс для кнопок */
+.directions-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 32px;
+    border-radius: 30px;
+    /* font-size: 14px; */
+    /* font-weight: 500; */
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Главная кнопка */
+.directions-btn--primary {
+    font-family: 'Inter', sans-serif;
+    background-color: #D1B694;
+    /* Более насыщенный золотистый */
+    color: #3B3B3A;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.directions-btn--primary:hover {
+    background-color: #ceb18a;
+}
+
+/* Второстепенная кнопка */
+.directions-btn--secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.directions-btn--secondary:hover {
+    border-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Адаптивность для мобильной версии */
+@media (max-width: 768px) {
+    .directions-banner {
+        padding: 20px 30px;
+        min-height: auto;
+        border-radius: 20px;
+    }
+
+    .directions-banner__title {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .directions-banner__price {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+
+    .directions-list {
+        margin-bottom: 32px;
+    }
+
+    .directions-list__item {
+        font-size: 14px;
+    }
+
+    /* В мобильной версии элементы кнопок встают друг под другом */
+    .directions-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .directions-btn {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .directions-btn--primary {
+        color: #3B3B3A;
+    }
+}
+
+/* СЕКЦИЯ 2 Основной контейнер секции */
+.services-section {
+    /* padding: 60px 0; */
+}
+
+/* Заголовок */
+.services-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #3D3D3C;
+    /* Темный благородный оттенок */
+    margin: 0 0 32px 0;
+}
+
+/* Сетка (на десктопе 4 колонки) */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Стили карточки */
+.services-card {
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 3;
+    /* Задает карточкам правильные пропорции */
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Создаем градиентный слой поверх картинки, но под плашкой с текстом */
+.services-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* Градиент: прозрачный сверху, плавно переходит в черный (с прозрачностью 60%) снизу */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    z-index: 2;
+    /* Встает поверх картинки */
+    pointer-events: none;
+    /* Чтобы слой не мешал кликам */
+}
+
+/* Изображение внутри карточки */
+.services-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    z-index: 1;
+    /* Картинка на самом нижнем слое */
+}
+
+/* Изображение внутри карточки */
+/* .services-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+} */
+
+/* Легкий эффект увеличения картинки при наведении */
+.services-card:hover .services-card__img {
+    transform: scale(1.04);
+}
+
+/* Плашка с размытием (Blur) */
+.services-card__badge {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    /* background: rgba(0, 0, 0, 0.25);  */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(7px);
+    /* Эффект матового стекла */
+    -webkit-backdrop-filter: blur(7px);
+    /* Поддержка Safari */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 16px 20px;
+    min-height: 81px;
+    height: 81px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+/* Текст на плашке */
+.services-card__text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.1;
+}
+
+/* Центрирование нижней кнопки */
+.services-footer {
+    display: flex;
+    justify-content: center;
+}
+
+/* Кнопка "Все услуги" */
+.services-btn-more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 48px;
+    background-color: #dbbfa1;
+    /* Бежево-золотистый оттенок из макета */
+    color: #2e2a25;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.services-btn-more:hover {
+    background-color: #ccac8a;
+}
+
+/* --- Адаптивность --- */
+
+/* Планшетная версия: 2 колонки */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Мобильная версия: карточки по 2 в ряд */
+@media (max-width: 640px) {
+    .services-section {
+        /* padding: 40px 0; */
+    }
+
+    .services-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Перестраиваем сетку на 2 колонки вместо 1 */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        /* Уменьшаем зазоры, чтобы выиграть место для текста */
+        margin-bottom: 24px;
+    }
+
+    .services-card {
+        border-radius: 14px;
+        /* Чуть уменьшаем скругление под маленькие экраны */
+        aspect-ratio: auto; /* Отключаем пропорцию, которая была на ПК */
+        height: 179px;       /* Жестко задаем высоту 179px согласно ТЗ */
+        width: 100%;        /* Ширина послушно займет половину грид-сетки */
+    }
+
+    /* Адаптируем плашку с блюром под узкие карточки */
+    .services-card__badge {
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+        padding: 4px 6px;
+        min-height: 62px;
+        height: 71px;
+        border-radius: 10px;
+    }
+
+    /* Уменьшаем шрифт, чтобы длинные названия не вылезали за края */
+    .services-card__text {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    .services-btn-more {
+        width: 100%;
+        /* Кнопку «Все услуги» в самом низу оставляем на всю ширину */
+    }
+}
+
+/* Совсем маленькие экраны (опционально, для экстра-компактности) */
+@media (max-width: 375px) {
+    .services-card__text {
+        font-size: 10px;
+    }
+}
+
+/* ТРЕТЬЯ СЕКЦИЯ */
+
+/* Основной контейнер секции */
+.doctors-section {
+    /* padding: 60px 0; */
+}
+
+/* Заголовок */
+.doctors-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #2e2a25;
+    margin: 0 0 32px 0;
+}
+
+/* Сетка (на десктопе 3 колонки) */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Карточка врача */
+.doctor-card {
+    background-color: #f4f1ea;
+    border: 1px solid #ebdccb;
+    border-radius: 20px;
+    padding: 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* min-height: 180px; */
+}
+
+/* Верхняя часть карточки */
+.doctor-card__top {
+    display: flex;
+    position: relative;
+    margin-bottom: 16px;
+}
+
+/* Контейнер для фото с закруглением */
+.doctor-card__photo-wrapper {
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+    margin-right: 16px;
+    background-color: #e2e8f0;
+}
+
+.doctor-card__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Текстовый блок (Имя, языки) */
+.doctor-card__info {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    justify-content: flex-start;
+    padding-right: 100px;
+    /* Оставляем место под бейджи справа */
+}
+
+.doctor-card__name {
+    max-width: 12ch;
+    /* Ограничиваем ширину примерно в 12 символов */
+    /* ИЛИ в пикселях: */
+    max-width: 140px;
+
+    word-spacing: 100vw;
+    /* Хак: заставляет каждое слово начинаться с новой строки */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2e2a25;
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+}
+
+.doctor-card__languages {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: #8c857b;
+    margin: 0;
+}
+
+.doctor-card__languages span {
+    color: #8c857b;
+    font-weight: 500;
+}
+
+/* Контейнер для бейджей (на десктопе позиционируем в верхний правый угол) */
+.doctor-card__badges {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+/* Стили бейджа */
+.doctor-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: #615a51;
+    background-color: #f3ede4;
+    border: 1px solid #ebdccb;
+    padding: 4px 10px;
+    border-radius: 8px;
+    white-space: nowrap;
+}
+
+/* Нижняя часть карточки */
+.doctor-card__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* border-top: 1px solid #ebdccb; */
+    /* padding-top: 14px; */
+    gap: 16px;
+}
+
+/* Специальность */
+.doctor-card__specialty {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: #3B3B3A;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Круглая кнопка плюс */
+.doctor-card__btn-add {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #f59e0b;
+    /* Оранжево-желтый круг */
+    color: #000;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+}
+
+.doctor-card__btn-add:hover {
+    background-color: #d97706;
+}
+
+/* --- Адаптивность под мобильную версию --- */
+@media (max-width: 992px) {
+    .doctors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .doctors-section {
+        padding: 40px 0;
+    }
+
+    .doctors-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Все карточки встают одна под другой */
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .doctor-card {
+        padding: 16px;
+    }
+
+    /* Перестраиваем верхнюю структуру под ТЗ */
+    .doctor-card__top {
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* Разрешаем перенос бейджей на новую строку */
+        margin-bottom: 12px;
+    }
+
+    /* Снимаем абсолютное позиционирование с бейджей на мобилках */
+    .doctor-card__badges {
+        position: static;
+        flex-direction: row;
+        /* Выстраиваем бейджи в ряд */
+        width: 100%;
+        /* Занимают всю ширину под фото и именем */
+        margin-top: 12px;
+        /* Отступ сверху от картинки/имени */
+        justify-content: flex-start;
+        gap: 6px;
+    }
+
+    /* Сбрасываем правый паддинг, так как бейджи ушли вниз */
+    .doctor-card__info {
+        padding-right: 0;
+    }
+
+    /* Нижняя часть со специальностью встает строго под бейджами */
+    .doctor-card__bottom {
+        border-top: none;
+        /* Убираем линию, если структура стала сплошной */
+        padding-top: 4px;
+    }
+
+    .doctor-card__specialty {
+        font-size: 13px;
+    }
+}
+
+/* штатная секция с врачами */
+.new-doctors-list {
+    .section-list__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: -1px;
+        color: #3D3D3C;
+        margin: 0 0 32px 0;
+
+        @media(max-width:767.98px) {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 0;
+        }
+    }
+
+    .section-doctors-list {
+        padding-bottom: 0;
+    }
+}
+
+/* Претмущества */
+/* Основной контейнер секции */
+.advantages-section {
+    /* padding: 60px 0; */
+}
+
+/* Заголовок */
+.advantages-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #3D3D3C;
+    margin: 0 0 32px 0;
+}
+
+/* Сетка преимуществ (4 колонки на десктопе) */
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Карточка преимущества */
+.advantage-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 32px 24px;
+    min-height: 180px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    /* Стили для фоновой SVG-иконки в правом верхнем углу */
+    background-repeat: no-repeat;
+    background-position: right 16px top 16px;
+    background-size: 48px auto;
+    /* Подбери размер узора под твой SVG */
+}
+
+/* Название преимущества */
+/* Карточка преимущества */
+/* Карточка преимущества */
+.advantage-card {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 32px 24px;
+    min-height: 180px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+    /* У самого родителя фона нет — задвоение физически невозможно */
+}
+
+/* Слой для фонового паттерна */
+.advantage-card::before {
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Подставляем переменную, переданную из HTML */
+    background-image: var(--bg-pattern);
+    background-repeat: no-repeat;
+    background-position: right 12px top 12px;
+    background-size: 100px auto;
+
+    /* Прозрачность */
+    opacity: 0.20;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+.advantage-card::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Напрямую читаем переменную из HTML-атрибута style без inherit */
+    background-image: url('../img/icons/li_marker.svg');
+    background-repeat: no-repeat;
+    background-position: right 12px top 12px;
+    background-size: 110px auto;
+    /* Размер на ПК */
+
+    opacity: 0.15;
+    /* Прозрачность */
+    z-index: 1;
+    /* Фон под текстом */
+    pointer-events: none;
+}
+
+/* Текст (поднимаем выше слоя с фоном) */
+.advantage-card__title {
+    position: relative;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 12px 0;
+    line-height: 1;
+    letter-spacing: -1px;
+    padding-right: 55px;
+}
+
+.advantage-card__desc {
+    position: relative;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    font-weight: 400;
+    color: #7A7875;
+    margin: 0;
+}
+
+/* --- Адаптивность и поддержка Slick Slider --- */
+
+/* Планшетная версия: 2 колонки */
+@media (max-width: 1024px) {
+    .advantages-grid:not(.slick-initialized) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+/* Мобильная версия со слайдером */
+@media (max-width: 640px) {
+
+    .advantages-section {
+        padding: 0px 0;
+        overflow: hidden;
+    }
+
+    /* 1. Находим контейнер внутри нашей секции и убираем у него отступ СПРАВА */
+    .advantages-section .container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .advantages-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        padding-left: 15px;
+    }
+
+    /* Когда Slick включен, мы отключаем Grid, чтобы слайдер работал корректно */
+    .advantages-grid.slick-initialized {
+        display: block;
+        white-space: nowrap;
+        /* Не дает слайдам переноситься вниз */
+    }
+
+    /* Стили для самого слайда внутри Slick */
+    .advantages-grid .slick-slide {
+        display: inline-block !important;
+        vertical-align: top;
+        float: none;
+        white-space: normal;
+        margin-right: 0px;
+        padding-left: 15px;
+        width: auto !important;
+        /* Убираем 100% со слайда */
+    }
+
+    /* Жестко задаем ширину самой карточке, перебивая инлайн-стили Slick */
+    .advantage-card {
+        padding: 24px 20px;
+        min-height: 160px;
+        width: 280px !important;
+        /* !important не даст Slick растянуть её на 100% */
+    }
+
+    /* Принудительно оживляем и позиционируем псевдоэлемент фонового узора на мобильных */
+    .advantage-card::before {
+        content: '' !important;
+        position: absolute !important;
+        top: -20px !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+
+        /* Гарантируем, что переменная с картинкой подтягивается */
+        background-image: url('../img/icons/li_marker.svg');
+        background-repeat: no-repeat !important;
+
+        /* Позиционирование и размер узора на мобильном */
+        background-position: right 0px top 12px !important;
+        background-size: 120px auto !important;
+
+        /* Прозрачность */
+        opacity: 0.15 !important;
+        z-index: 1 !important;
+    }
+
+    .advantage-card__title {
+        font-size: 16px;
+        margin-bottom: 8px;
+        padding-right: 45px;
+    }
+
+    .advantage-card__desc {
+        font-size: 14px;
+    }
+}
+
+/* ПЛАШКИ НАВИГАЦИИ */
+.tabs-sec {
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        margin-top: 40px;
+    }
+}
+
+/* Контейнер секции навигации */
+.directions-nav-section {
+    /* padding: 24px 0; */
+}
+
+/* Лента табов (Десктопная версия: флекс-ряд с переносом) */
+.directions-nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Отступы между плашками */
+}
+
+/* Базовый стиль для плашки-ссылки */
+.directions-nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    /* Фиксированная высота как на макете */
+    padding: 0 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    /* Мягкие скругленные углы */
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2e2a25;
+    text-decoration: none;
+    white-space: nowrap;
+    /* Запрещаем перенос текста внутри кнопки */
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+/* Эффект при наведении на десктопе */
+.directions-nav-link:hover:not(.is-active) {
+    background-color: #E9E5DD;
+    color: #1a1816;
+}
+
+/* Активное состояние (первая плашка) */
+.directions-nav-link.is-active {
+    background-color: #E9E5DD;
+    /* Бежево-серая плашка из макета */
+    color: #2e2a25;
+    cursor: default;
+}
+
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЙ SLICK SLIDER (По нашему проверенному принципу)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .directions-nav-section {
+        /* padding: 16px 0; */
+        overflow: hidden;
+        /* Срезаем выходящий за края слайдер */
+    }
+
+    /* Убираем правый паддинг контейнера, чтобы табы уходили в край экрана */
+    .directions-nav-section .container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+
+    /* Перестраиваем флекс под Slick */
+    .directions-nav-tabs.slick-initialized {
+        display: block;
+        white-space: nowrap;
+    }
+
+    .directions-nav-tabs .slick-track {
+        padding-right: 20px;
+        /* Зазор в самом конце ленты */
+    }
+
+    .directions-nav-tabs .slick-slide {
+        display: inline-block !important;
+        vertical-align: top;
+        float: none;
+        margin-right: 8px !important;
+        /* Отступ между плашками в слайдере */
+        width: auto !important;
+        /* Slick не будет насильно растягивать ссылки */
+    }
+
+    /* На мобилке плашка адаптируется под ширину своего текста */
+    .directions-nav-link {
+        display: flex !important;
+        height: 40px;
+        /* Чуть компактнее по высоте на мобильных */
+        padding: 0 16px;
+        font-size: 13px;
+
+        &:first-child {
+            margin-left: 15px;
+        }
+    }
+}
+
+/* КОМУ ПОДОЙДЕТ */
+/* Общая плашка блока */
+.consultation-block {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    box-sizing: border-box;
+    margin: 40px 0;
+}
+
+/* Картинка */
+.consultation-image-wrapper {
+    flex: 0 0 40%;
+    max-width: 554px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.consultation-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.consultation-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.consultation-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #3B3B3B;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+}
+
+.consultation-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3B3B3B;
+    margin: 0 0 24px 0;
+}
+
+/* Список */
+.consultation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 922px;
+}
+
+/* Элемент списка теперь является позицией для маркера */
+.consultation-list__item {
+    position: relative;
+    /* Слева делаем отступ, равный ширине иконки + зазор до текста */
+    padding-left: 24px;
+    box-sizing: border-box;
+}
+
+/* Создаем SVG маркер через CSS */
+.consultation-list__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    /* Выравниваем иконку по высоте первой строки текста */
+    top: 4px;
+    width: 12px;
+    /* Задай нужную ширину ромбика */
+    height: 12px;
+    /* Задай нужную высоту ромбика */
+
+    /* Подключаем твой SVG файл */
+    background-image: url('../img/icons/li_marker.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.consultation-list__text {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #3B3B3B;
+    margin: 0;
+}
+
+.consultation-list__text strong {
+    color: #2e2a25;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .consultation-block {
+        gap: 24px;
+        padding: 24px;
+        margin-top: 0;
+    }
+
+    .consultation-image-wrapper {
+        flex: 0 0 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .consultation-block {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        margin-top: 0;
+    }
+
+    .consultation-image-wrapper {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .consultation-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        letter-spacing: -1px;
+        font-weight: 600;
+    }
+
+    .consultation-subtitle {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .consultation-list {
+        gap: 12px;
+    }
+
+    .consultation-list__item {
+        padding-left: 20px;
+        /* На мобилке можно сделать отступ чуть компактнее */
+    }
+
+    .consultation-list__item::before {
+        top: 3px;
+        /* Корректируем центровку под уменьшенный шрифт */
+        width: 10px;
+        height: 10px;
+    }
+
+    .consultation-list__text {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+}
+
+/* ВТОРАЯ КОНТЕНТНАЯ ЧАСТЬ */
+
+/* Главная плашка */
+.process-block {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    display: flex;
+    gap: 48px;
+    /* Зазор между текстом и картинкой */
+    align-items: flex-start;
+    box-sizing: border-box;
+    margin-bottom: 44px;
+}
+
+/* Контентная часть (слева) */
+.process-content {
+    flex: 1;
+}
+
+.process-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #3B3B3B;
+    margin: 0 0 16px 0;
+    line-height: 1.3;
+}
+
+.process-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #3B3B3B;
+    margin: 0 0 32px 0;
+}
+
+/* Список этапов */
+.process-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Отступы между этапами */
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Номер этапа (маленький и розово-бежевый) */
+.process-step__number {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8A8A8A;
+    /* Приглушенный оттенок из макета */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+}
+
+/* Заголовок этапа */
+.process-step__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+    letter-spacing: -1px;
+}
+
+/* Описание этапа */
+.process-step__desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #3B3B3B;
+    margin: 0;
+}
+
+/* Колонна с изображением (справа, занимает фиксированные 40%) */
+.process-image-wrapper {
+    flex: 0 0 40%;
+    max-width: 480px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: sticky;
+    /* Чтобы картинка плавно оставалась на экране при скролле этапов */
+    top: 20px;
+}
+
+.process-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Центрирование нижней кнопки */
+.process-footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+/* Кнопка "Читать больше" */
+.process-btn-more {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 48px;
+    background-color: #dbbfa1;
+    color: #2e2a25;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+
+.process-btn-more:hover {
+    background-color: #ccac8a;
+}
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ ПОД МОБИЛЬНУЮ ВЕРСИЮ
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .process-block {
+        gap: 32px;
+        padding: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Перестраиваем в один столбец, контент сверху, картинка снизу */
+    .process-block {
+        flex-direction: column;
+        gap: 24px;
+        padding: 20px;
+        border-radius: 20px;
+        margin-bottom: 34px;
+    }
+
+    /* Картинка падает вниз под контент */
+    .process-image-wrapper {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        position: static;
+        /* Отключаем sticky */
+        order: 2;
+        /* Явно пускаем после текста */
+    }
+
+    .process-content {
+        order: 1;
+    }
+
+    .process-title {
+        font-size: 18px;
+        letter-spacing: -1px;
+        color: #3B3B3B;
+        margin-bottom: 12px;
+    }
+
+    .process-subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+        line-height: 1.2;
+    }
+
+    .process-steps {
+        gap: 16px;
+    }
+
+    .process-step__title {
+        font-size: 16px;
+    }
+
+    .process-step__desc {
+    
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+    /* Кнопка во всю ширину экрана на мобилках */
+    .process-footer {
+        padding: 0 20px;
+        /* Чтобы кнопка не липла к краям экрана смартфона, если контейнер без падингов */
+    }
+
+    .process-btn-more {
+        width: 100%;
+    }
+
+    .process-image {
+    height: 280px;
+}
+}
+
+/* МАСОНРИ ГАЛЛЕРЕЯ */
+.gallery-section {
+    /* padding: 60px 0; */
+}
+
+.gallery-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #3D3D3C;
+    margin: 0 0 32px 0;
+}
+
+/* --- Десктопная сетка (Исправленная кирпичная кладка) --- */
+.gallery-grid {
+    display: grid;
+    /* Увеличиваем до 12 колонок для идеальной точности без дробей */
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+/* Базовый элемент галереи */
+.gallery-item {
+    position: relative;
+    height: 260px;
+    /* Фиксированная высота рядов как на макете */
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.03);
+}
+
+/* Автоматическое распределение "кирпичиков" в ряду (Цикличный паттерн по 6 элементов) */
+
+/* Первый ряд: широкая (4), узкая (3), средняя (5) = в сумме 12 колонок */
+.gallery-grid .gallery-item:nth-child(6n+1) {
+    grid-column: span 4;
+}
+
+.gallery-grid .gallery-item:nth-child(6n+2) {
+    grid-column: span 3;
+}
+
+.gallery-grid .gallery-item:nth-child(6n+3) {
+    grid-column: span 5;
+}
+
+/* Второй ряд: средняя (5), узкая (3), широкая (4) = в сумме 12 колонок */
+.gallery-grid .gallery-item:nth-child(6n+4) {
+    grid-column: span 5;
+}
+
+.gallery-grid .gallery-item:nth-child(6n+5) {
+    grid-column: span 3;
+}
+
+.gallery-grid .gallery-item:nth-child(6n+6) {
+    grid-column: span 4;
+}
+
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ И МОБИЛЬНЫЙ SLICK SLIDER
+   ========================================================================== */
+
+/* Планшетная версия: перестраиваем в более простую сетку */
+@media (max-width: 1024px) {
+    .gallery-grid:not(.slick-initialized) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    /* Сбрасываем десктопные спаны на планшетах */
+    .gallery-grid .gallery-item {
+        grid-column: span 1 !important;
+        height: 220px;
+    }
+}
+
+/* Мобильная версия (включается Слайдер с точками) */
+@media (max-width: 640px) {
+    .gallery-section {
+        /* padding: 40px 0; */
+    }
+
+    .gallery-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Отключаем грид, чтобы Slick мог выстроить слайды линейно */
+    .gallery-grid.slick-initialized {
+        display: block;
+    }
+
+    /* 1 экран = 1 слайд во всю ширину */
+    .gallery-grid .gallery-item {
+        /* height: auto; */
+        height: 202px;
+        aspect-ratio: 4 / 3;
+        /* Красивая фото-пропорция на мобильном */
+        border-radius: 16px;
+        width: 100%;
+    }
+
+    /* --- Стилизация точек пагинации Slick Slider под дизайн клиники --- */
+    .gallery-grid .slick-dots {
+        position: relative;
+        bottom: 0;
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0 0;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .gallery-grid .slick-dots li {
+        width: 8px;
+        height: 8px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .gallery-grid .slick-dots li button {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        border: none;
+        background-color: #e5ded4;
+        /* Цвет неактивной точки */
+        border-radius: 50%;
+        text-indent: -9999px;
+        /* Прячем дефолтные цифры Slick */
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    /* Активная точка */
+    .gallery-grid .slick-dots li.slick-active button {
+        background-color: #cca885;
+        /* Фирменный золотисто-бежевый цвет */
+        transform: scale(1.2);
+        /* Делаем активную точку чуть крупнее */
+    }
+}
+
+
+/* СЕКЦИЯ С ПРАЙСОМ */
+
+/* Главная плашка */
+.prices-block {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-sizing: border-box;
+    margin: 40px 0;
+}
+
+/* Заголовок секции */
+.prices-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #3B3B3B;
+    margin: 0 0 32px 0;
+    line-height: 1.3;
+}
+
+/* Шапка таблицы (На десктопе выравниваем по краям) */
+.prices-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ebdccb;
+    /* Тонкая линия разделителя из макета */
+    margin-bottom: 8px;
+}
+
+.prices-header__col {
+   font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #7A7875;
+    letter-spacing: -1px;
+    /* Блеклый серый цвет подписи */
+}
+
+/* Список строк */
+.prices-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Стилизация строки прайса */
+.prices-row {
+    display: flex;
+    justify-content: space-between;
+    /* Выравнивание по верхней границе согласно ТЗ */
+    align-items: flex-start;
+    padding: 20px 0;
+    border-bottom: 1px solid #f3ede4;
+    /* Легкая разделительная линия между услугами */
+    gap: 32px;
+    /* Зазор, чтобы текст названия не прилипал к цене */
+}
+
+/* Убираем нижнюю рамку у последней строки */
+.prices-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Блок названия услуги */
+.prices-row__name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #4a453f;
+    line-height: 1.5;
+    flex: 1;
+    /* Позволяет названию занимать всё доступное пространство */
+}
+
+/* Блок стоимости */
+.prices-row__value {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    /* Жирное начертание цены из макета */
+    color: #2e2a25;
+    text-align: right;
+    white-space: nowrap;
+    /* Не даем валюте и условиям разрываться */
+}
+
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ ПОД МОБИЛЬНУЮ ВЕРСИЮ (Все элементы друг под другом)
+   ========================================================================= */
+
+@media (max-width: 640px) {
+    .prices-block {
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    .prices-title {
+        font-size: 18px;
+        margin-bottom: 24px;
+    }
+
+    /* Полностью скрываем шапку таблицы на смартфонах */
+    .prices-header {
+        display: none;
+    }
+
+    /* Перестраиваем строку во флекс-столбец */
+    .prices-row {
+        /* flex-direction: column; */
+        flex-direction: row;
+        align-items: flex-start;
+        /* Выравнивание колонок по левой верхней границе */
+        gap: 18px;
+        /* Небольшой зазор между названием и ценой */
+        padding: 16px 0;
+    }
+
+    .prices-row:first-child {
+        padding-top: 0;
+    }
+
+    .prices-row__name {
+        font-size: 14px;
+    }
+
+    /* Сбрасываем правое выравнивание цены для мобилки */
+    .prices-row__value {
+        font-size: 14px;
+        text-align: right;
+
+        /* 1. Разрешаем тексту переноситься на новую строку */
+        white-space: normal; 
+        
+        /* 2. Заставляем слова переноситься только по пробелам, а не резать цифры */
+        word-break: keep-all; 
+        overflow-wrap: break-word;
+        
+        /* 3. Ограничиваем максимальную ширину блока цены (примерно под длину "800 AED / сеанс"),
+           чтобы название услуги слева не вытесняло цену в узкую вертикальную полоску */
+        max-width: 90px; 
+        flex-shrink: 0; /* Не даем флексу сжимать блок цены меньше этой ширины */
+    }
+}
+
+/* Карта с формой */
+
+/* Главный блок-обертка */
+.contacts-block {
+    background-color: #f4f1ea;
+    /* Легкий теплый фон подложки из макета */
+    /* border-radius: 24px; */
+    /* padding: 32px; */
+    display: flex;
+    gap: 32px;
+    /* Расстояние между формой и картой на ПК */
+    align-items: stretch;
+    box-sizing: border-box;
+    margin: 40px 0;
+}
+
+/* Колонка формы */
+.contacts-form-wrapper {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px 32px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #3D3D3C;
+    margin: 0 0 28px 0;
+    line-height: 1.3;
+    letter-spacing: -1px;
+}
+
+/* Поля формы */
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #8c857b;
+    /* Цвет подписей */
+}
+
+.form-input {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    height: 46px;
+    padding: 0 16px;
+    background-color: #ffffff;
+    border: 1px solid #ebdccb;
+    border-radius: 10px;
+    color: #2e2a25;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.form-input::placeholder {
+    color: #c4be stroke;
+    opacity: 0.6;
+}
+
+.form-input:focus {
+    border-color: #cca885;
+    box-shadow: 0 0 0 3px rgba(204, 168, 133, 0.1);
+}
+
+/* Стилизация блока чекбокса согласия */
+.form-checkbox-wrapper {
+    margin-top: 4px;
+}
+
+.form-checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.form-checkbox {
+    margin-top: 3px;
+    margin-right: 10px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.form-checkbox-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #8c857b;
+}
+
+.form-checkbox-text a {
+    color: #8c857b;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.form-checkbox-text a:hover {
+    color: #2e2a25;
+}
+
+/* Кнопка отправки формы (Бежевая округлая плашка из макета) */
+.form-submit-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    background-color: #dbbfa1;
+    /* Приглушенный благородный бежевый */
+    color: #2e2a25;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.form-submit-btn:hover {
+    background-color: #ccac8a;
+}
+
+/* Колонка карты (Справа) */
+/* Колонка карты (Занимает ровно 2 части из 3 — около 66% ширины) */
+.contacts-map-wrapper {
+    flex: 2;
+    /* В два раза шире формы, создавая пропорцию 2/3 */
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 450px;
+    border: 1px solid #ebdccb;
+}
+
+.google-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ ПОД МОБИЛЬНУЮ ВЕРСИЮ (Карта меняется местами с формой)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    .contacts-block {
+        gap: 20px;
+        padding: 20px;
+        margin-top: 0;
+    }
+
+    .contacts-form-wrapper {
+        padding: 28px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Инвертируем направление: Карта уходит НАВЕРХ, а форма встает СНИЗУ */
+    .contacts-block {
+        flex-direction: column-reverse;
+        gap: 16px;
+        padding: 12px 0 12px 0;
+        border-radius: 20px;
+    }
+
+    /* Карта на мобильном */
+    .contacts-map-wrapper {
+        width: 100%;
+        min-height: 300px;
+        height: 300px;
+        flex: none;
+        border-radius: 16px;
+    }
+
+    /* Форма на мобильном */
+    .contacts-form-wrapper {
+        width: 100%;
+        flex: none;
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+
+    .contacts-title {
+        font-size: 20px;
+        margin-bottom: 0px;
+    }
+}
+
+/* СЕКЦИЯ FAQ */
+
+/* Главная плашка */
+.faq-block {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-sizing: border-box;
+    margin: 40px 0;
+}
+
+/* Заголовок секции */
+.faq-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #3D3D3C;
+    margin: 0 0 32px 0;
+    line-height: 1.3;
+}
+
+:root {
+    --bg-page: #f5f5f5;
+    --bg-card: #ffffff;
+    --border-color: #e0e0e0;
+    --text-title: #333333;
+    --text-content: #666666;
+    --accent-color: #333333;
+    /* Цвет галочки */
+}
+
+.faq-container {
+    /* max-width: 700px; */
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #fff;
+    border-bottom: 1px solid rgba(209, 182, 148, .2);
+    /* border-radius: 12px; */
+    margin-bottom: 16px;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #bbb;
+}
+
+summary {
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 24px;
+    cursor: pointer;
+    font-size: 20px;
+    letter-spacing: -1px;
+    font-weight: 500;
+    color: #000;
+    user-select: none;
+    position: relative;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+.arrow-icon {
+    position: relative;
+    /* Управляй общим размером иконки здесь (меняй 12px на 16px, 18px и т.д.) */
+    width: 18px;
+    height: 18px;
+
+    flex-shrink: 0;
+    margin-left: 15px;
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Рисуем стрелочку через SVG в фоне псевдоэлемента */
+.arrow-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Вставляем SVG-код с цветом #C4A276 (в кодировке %23C4A276) */
+    background-image: url("../img/icons/faq-arrow.svg");
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /* Заставляет SVG идеально масштабироваться под размер родителя */
+}
+
+/* Эффект разворота при открытии (активном состоянии) */
+.arrow-icon.is-active,
+.is-active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+
+/* Поворот всей иконки при открытии */
+.faq-item[open] .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.faq-content {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    padding: 0 24px 24px 24px;
+    line-height: 150%;
+    color: #383838;
+}
+
+@media(max-width:640px) {
+
+    /* Главная плашка */
+    .faq-block {
+        padding: 15px;
+    }
+
+    /* Заголовок секции */
+    .faq-title {
+        margin: 0 0 12px 0;
+        font-size: 22px;
+    }
+
+    .faq-block summary {
+        padding: 12px 0px;
+        font-size: 16px;
+    }
+
+    .arrow-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .faq-content {
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
